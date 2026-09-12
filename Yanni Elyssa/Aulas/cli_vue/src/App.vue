@@ -1,17 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <di>
+    <home-component />
+  </di>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import HomeComponent from './components/HomeComponent.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    HomeComponent,
+  },
+  mounted() {
+    console.log("Minha aplicaçãocriou minha tela e todos os elementos do DOM");
+
+  },
+  created() {
+    console.log("Minha aplicação criou meus Objetos JS");
+  },
+  errorCapture() {
+  alert("Erro!!!");
+  },
+};
 </script>
 
 <style>
